@@ -1,0 +1,2 @@
+# Ensure new text files committed will have their line endings set to `LF`.
+* text=auto
