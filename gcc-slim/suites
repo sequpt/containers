@@ -1,0 +1,7 @@
+[{"suite":"oldoldoldstable","codename":"jessie","version":"8.11","date":"2019-07-06T09:36:16+00:00","valid_until":"","image_tag":"8.11-slim"},
+{"suite":"oldoldstable","codename":"stretch","version":"9.13","date":"2021-08-14T07:42:00+00:00","valid_until":"","image_tag":"9.13-slim"},
+{"suite":"oldstable","codename":"buster","version":"10.13","date":"2022-09-10T11:30:54+00:00","valid_until":"","image_tag":"10.13-slim"},
+{"suite":"stable","codename":"bullseye","version":"11.6","date":"2022-12-17T10:14:37+00:00","valid_until":"","image_tag":"11.6-slim"},
+{"suite":"testing","codename":"bookworm","version":"","date":"2023-01-15T14:28:23+00:00","valid_until":"2023-01-22T14:28:23+00:00","image_tag":"bookworm-slim"},
+{"suite":"unstable","codename":"sid","version":"","date":"2023-01-15T14:28:23+00:00","valid_until":"2023-01-22T14:28:23+00:00","image_tag":"sid-slim"},
+{"suite":"experimental","codename":"rc-buggy","version":"","date":"2023-01-15T14:28:23+00:00","valid_until":"2023-01-22T14:28:23+00:00","image_tag":""}]

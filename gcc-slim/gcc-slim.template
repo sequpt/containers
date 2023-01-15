@@ -1,0 +1,27 @@
+FROM @IMAGE@ AS base
+RUN apt-get update \
+    && apt-get install --yes --no-install-recommends \
+        gcc-@GCC_VERSION_MAJOR@ \
+        libc6-dev \
+        make \
+    && apt-get clean \
+    && apt-get autoremove --purge \
+    && rm --recursive --force /var/lib/apt/lists/* \
+    && update-alternatives \
+        --install /usr/bin/gcc        gcc        /usr/bin/gcc-@GCC_VERSION_MAJOR@ 10 \
+        --slave   /usr/bin/gcc-ar     gcc-ar     /usr/bin/gcc-ar-@GCC_VERSION_MAJOR@ \
+        --slave   /usr/bin/gcc-nm     gcc-nm     /usr/bin/gcc-nm-@GCC_VERSION_MAJOR@ \
+        --slave   /usr/bin/gcc-ranlib gcc-ranlib /usr/bin/gcc-ranlib-@GCC_VERSION_MAJOR@ \
+        --slave   /usr/bin/gcov       gcov       /usr/bin/gcov-@GCC_VERSION_MAJOR@ \
+        --slave   /usr/bin/gcov-dump  gcov-dump  /usr/bin/gcov-dump-@GCC_VERSION_MAJOR@ \
+        --slave   /usr/bin/gcov-tool  gcov-tool  /usr/bin/gcov-tool-@GCC_VERSION_MAJOR@ \
+        --slave   /usr/bin/cpp        cpp        /usr/bin/cpp-@GCC_VERSION_MAJOR@ \
+    && update-alternatives \
+        --install /usr/bin/cc cc /usr/bin/gcc 10
+
+FROM base AS final
+ENV USER="gcc"
+RUN useradd --uid "1000" --create-home "$USER" --no-log-init
+ENV HOME="/home/$USER"
+WORKDIR "$HOME"
+USER "$USER"

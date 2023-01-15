@@ -1,0 +1,8 @@
+[{"version":"6.3.0-18+deb9u1","revision":"","image_tag":"9.13-slim"},
+{"version":"7.4.0-6","revision":"76f9c710c6a73553cc5ed25cbcd50713d12338dc","image_tag":"10.13-slim"},
+{"version":"8.3.0-6","revision":"ea39ad9b85ede8167553df77700a1e090fa76aff","image_tag":"10.13-slim"},
+{"version":"9.3.0-22","revision":"40a6e62f4fdfe4d7b3276e145bf345873ab0ae70","image_tag":"11.6-slim"},
+{"version":"10.2.1-6","revision":"f36d58b620a2cfe869fb376b2ce90639e7f73973","image_tag":"11.6-slim"},
+{"version":"11.3.0-8","revision":"7898d46156d97a90fe95df956094ad9193761aeb","image_tag":"bookworm-slim"},
+{"version":"12.2.0-13","revision":"","image_tag":"bookworm-slim"},
+{"version":"13-20230114-1","revision":"482d6c934eff803e0e084258ab729fae6e712ad6","image_tag":""}]
